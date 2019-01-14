@@ -1,0 +1,34 @@
+#!/bin/bash
+
+#-----------------------------------------------------
+# シェルスクリプト名：test
+# 概要：時間計測用のテスト
+# 引数：なし
+#-----------------------------------------------------
+
+. script_monitor_func.sh
+
+### 計測開始
+start_monitor
+
+echo "0秒"
+sleep 5
+elapsed_time "処理１終了"
+
+echo "5秒"
+sleep 5
+elapsed_time "処理２終了"
+
+echo "10秒"
+sleep 5
+elapsed_time "処理３終了"
+
+echo "15秒"
+sleep 5
+elapsed_time "処理４終了"
+
+echo "20秒"
+elapsed_time "処理5終了"
+
+### 計測終了
+end_monitor
